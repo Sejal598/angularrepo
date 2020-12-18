@@ -1,0 +1,30 @@
+#nav{
+    width:100%px;
+    height:60px;
+    margin:auto;
+    background-color:rgb(8, 8, 124);
+    padding-top:10px;
+    
+    
+    }
+    ul{
+
+        list-style-type:none;
+       
+    
+    }
+    
+    ul li{
+        display:inline-block;
+         width:90px;
+          margin:auto;
+          overflow:hidden;
+    }
+    ul li a{
+       
+       text-decoration: none;
+         color:white;
+         
+    
+    }
+    

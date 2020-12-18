@@ -1,0 +1,54 @@
+System.config({
+  baseURL: "./",
+  map: {
+    "@angular/core": "node_modules/@angular/core.umd.min.js",
+    "@angular/common": "node_modules/@angular/common.umd.min.js",
+    "@angular/compiler": "node_modules/@angular/compiler.umd.min.js",
+    "@angular/forms": "node_modules/@angular/forms.umd.min.js",
+    "@angular/http": "node_modules/@angular/http.umd.min.js",
+    "@angular/platform-browser":
+      "node_modules/@angular/platform-browser.umd.min.js",
+    "@angular/platform-browser-dynamic":
+      "node_modules/@angular/platform-browser-dynamic.umd.min.js",
+    "@angular/router": "node_modules/@angular/router.umd.min.js",
+    "plugin-typescript": "node_modules/plugin-typescript/lib/",
+    typescript: "node_modules/typescript/",
+    "@hot": "@empty"
+  },
+  bundles: {
+    "node_modules/rxjs-system-bundle/Rx.system.js": [
+      "rxjs",
+      "rxjs/*",
+      "rxjs/operator/*",
+      "rxjs/observable/*",
+      "rxjs/scheduler/*",
+      "rxjs/symbol/*",
+      "rxjs/add/operator/*",
+      "rxjs/add/observable/*",
+      "rxjs/util/*"
+    ]
+  },
+  packages: {
+    "": {
+      defaultExtension: "js"
+    },
+    rxjs: {
+      defaultExtension: false
+    },
+    "plugin-typescript": {
+      main: "plugin.js"
+    },
+    typescript: {
+      main: "lib/typescript.js",
+      meta: {
+        "lib/typescript.js": {
+          exports: "ts"
+        }
+      }
+    }
+  },
+  meta: {
+    "./solution": { loader: "inline-script-loader" }
+  },
+  transpiler: "plugin-typescript"
+});
